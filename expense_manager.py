@@ -42,9 +42,6 @@ def add_expense():
     save_expenses(expenses)
 
 
-
-
-
 def view_expenses():
     print("\n" + "=" * 50)
     print(" " * 17 + "ALL EXPENSES")
