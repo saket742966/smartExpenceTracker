@@ -108,3 +108,74 @@ def delete_expense():
 
     if not found:
         print("\nExpense ID not found.")
+        
+        
+def edit_expense():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EDIT EXPENSE")
+    print("=" * 50)
+
+    while True:
+        try:
+            expense_id = int(input("Enter Expense ID: "))
+
+            if expense_id > 0:
+                break
+            else:
+                print("Expense ID must be greater than 0.")
+
+        except ValueError:
+            print("Enter a valid Expense ID!")
+     
+            
+    found = False
+    
+    for expense in expenses:
+        if expense['id'] == expense_id:
+            found = True
+            
+            print("\n" + "-" * 15 + " CURRENT EXPENSE " + "-" * 15)
+            
+            print(f"ID              : {expense['id']}")
+            print(f"Category        : {expense['category']}")
+            print(f"Description     : {expense['description']}")
+            print(f"Amount          : ₹{expense['amount']}")
+            print(f"Payment Method  : {expense['payment_method']}")
+            break
+    
+    if not found :
+        print("Expense ID not found.")
+        
+        return
+        
+    
+    print('\n' + "-" * 50)
+    print(" " * 17 + "WHAT DO YOU WANT TO EDIT?")
+    print("-" * 50 + "\n")
+        
+    print("1. Category")
+    print("2. Description")
+    print("3. Amount")
+    print("4. Payment Method")
+    print("5. Cancel\n")
+    
+    choice = input("Enter a Choice: ")
+    
+    if choice == '1' :
+        pass
+        
+    elif choice == '2':
+        pass
+    
+    elif choice == '3':
+        pass
+        
+    elif choice == '4':
+        pass
+        
+    elif choice == '5':
+        pass
+        
+    else:
+        pass
+        
