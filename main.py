@@ -43,7 +43,7 @@ while True:
         print("Edit Expenses Selected")
 
     elif choice == 5:
-        print("Delete Expenses Selected")
+        delete_expense()
 
     elif choice == 6:
         print("Reports Selected")
