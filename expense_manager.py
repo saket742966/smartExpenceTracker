@@ -110,6 +110,47 @@ def delete_expense():
         print("\nExpense ID not found.")
         
         
+
+# ===========================================
+# EDIT HELPER FUNCTIONS
+# ===========================================
+
+def edit_category(expense, expenses):
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EDIT CATEGORY")
+    print("=" * 50)
+
+    print(f"Current Category : {expense['category']}")
+
+    while True:
+        new_category = input("Enter New Category: ").strip()
+
+        if new_category == "":
+            print("Category cannot be empty.")
+        else:
+            break
+
+    expense["category"] = new_category
+
+    save_expenses(expenses)
+
+    print("\nCategory updated successfully.")
+
+
+def edit_description(expense):
+    pass
+
+
+def edit_amount(expense):
+    pass
+
+
+def edit_payment_method(expense):
+    pass   
+
+
+
+
 def edit_expense():
     print("\n" + "=" * 50)
     print(" " * 17 + "EDIT EXPENSE")
@@ -162,20 +203,16 @@ def edit_expense():
     choice = input("Enter a Choice: ")
     
     if choice == '1' :
-        pass
+        edit_category(expense)
         
     elif choice == '2':
-        pass
+        edit_description(expense)
     
     elif choice == '3':
-        pass
+        edit_amount(expense)
         
     elif choice == '4':
-        pass
+        edit_payment_method(expense)
         
     elif choice == '5':
-        pass
-        
-    else:
-        pass
-        
+        print('Edit cancelled.')
