@@ -1,3 +1,6 @@
+from expense_manager import add_expense
+
+
 menu = '''
 ==================================================
               SMART EXPENSE TRACKER
@@ -19,34 +22,37 @@ Welcome! Manage your daily expenses with ease.
 ------------------------------------------------
 
 '''
-print(menu)
 
-choice = int(input("Enter your choice: "))
-print(choice)
+while True: 
+    
+    print(menu)
 
-if choice == 1:
-    print("Add Expence Selected")
+    choice = int(input("Enter your choice: "))
+    print(choice)
 
-elif choice == 2:
-    print("View Expenses Selected")
-    
-elif choice == 3:
-    print("Search Expenses Selected")
-    
-elif choice == 4:
-    print("Edit Expenses Selected")
+    if choice == 1:
+        add_expense()
 
-elif choice == 5:
-    print("Delete Expenses Selected")
+    elif choice == 2:
+        print("View Expenses Selected")
+        
+    elif choice == 3:
+        print("Search Expenses Selected")
+        
+    elif choice == 4:
+        print("Edit Expenses Selected")
 
-elif choice == 6:
-    print("Reports Selected")
-    
-elif choice == 7:
-    print("Save Data Selected")
-    
-elif choice == 8:
-    print("Exited")
-    
-else: 
-    print("Invalid Input !!")
+    elif choice == 5:
+        print("Delete Expenses Selected")
+
+    elif choice == 6:
+        print("Reports Selected")
+        
+    elif choice == 7:
+        print("Save Data Selected")
+        
+    elif choice == 8:
+        break
+        
+    else: 
+        print("Invalid Input !!")
