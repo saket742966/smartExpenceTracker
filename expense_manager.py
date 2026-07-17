@@ -1,4 +1,7 @@
-expenses = []
+from storage import save_expenses
+from storage import load_expenses
+
+expenses = load_expenses()
 next_id = 1
 
 def add_expense():
@@ -31,6 +34,7 @@ def add_expense():
     next_id += 1
     print("Expense Added Successfully")
     expenses.append(expense_data)
+    save_expenses(expenses)
 
 
 
