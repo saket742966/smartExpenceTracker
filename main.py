@@ -1,4 +1,4 @@
-from expense_manager import add_expense
+from expense_manager import *
 
 
 menu = '''
@@ -34,7 +34,7 @@ while True:
         add_expense()
 
     elif choice == 2:
-        print("View Expenses Selected")
+        view_expenses()
         
     elif choice == 3:
         print("Search Expenses Selected")
