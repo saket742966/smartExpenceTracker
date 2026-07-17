@@ -2,7 +2,12 @@ from storage import save_expenses
 from storage import load_expenses
 
 expenses = load_expenses()
-next_id = 1
+
+if expenses:
+    ids = [expense["id"] for expense in expenses]
+    next_id = max(ids) + 1
+else:
+    next_id = 1
 
 def add_expense():
     global next_id
