@@ -67,3 +67,47 @@ def view_expenses():
     print("\n" + "=" * 50)
     print(f"Total Expenses: {len(expenses)}")
     print("=" * 50)
+    
+    
+def delete_expense():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "DELETE EXPENSE")
+    print("=" * 50)
+
+    # Validate Expense ID
+    while True:
+        try:
+            del_id = int(input("Enter Expense ID: "))
+            if del_id > 0:
+                break
+            else:
+                print("Expense ID must be greater than 0.")
+        except ValueError:
+            print("Please enter a valid integer.")
+
+    found = False
+
+    for expense in expenses:
+        if expense["id"] == del_id:
+            found = True
+
+            print("\nExpense Found:\n")
+            print(f"ID              : {expense['id']}")
+            print(f"Category        : {expense['category']}")
+            print(f"Description     : {expense['description']}")
+            print(f"Amount          : ₹{expense['amount']}")
+            print(f"Payment Method  : {expense['payment_method']}")
+
+            choice = input("\nDelete this expense? (y/n): ").lower()
+
+            if choice == "y":
+                expenses.remove(expense)
+                save_expenses(expenses)
+                print("\nExpense deleted successfully.")
+            else:
+                print("\nDeletion cancelled.")
+
+            break
+
+    if not found:
+        print("\nExpense ID not found.")
