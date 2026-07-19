@@ -136,7 +136,6 @@ def edit_category(expense, expenses):
 
     print("\nCategory updated successfully.")
 
-
 def edit_description(expense, expenses):
     print("\n" + "=" * 50)
     print(" " * 17 + "EDIT DESCRIPTION")
@@ -206,9 +205,6 @@ def edit_payment_method(expense, expenses):
 # ===========================================
 # EDIT HELPER FUNCTIONS ENDS
 # ===========================================
-
-
-
 
 def edit_expense():
     print("\n" + "=" * 50)
