@@ -37,8 +37,8 @@ while True:
         view_expenses()
         
     elif choice == 3:
-        print("Search Expenses Selected")
-        
+        search_expense()
+                
     elif choice == 4:
         edit_expense()
 

@@ -271,3 +271,43 @@ def edit_expense():
 
     elif choice == "5":
         print("\nEdit cancelled.")
+        
+        
+def search_expense():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "SEARCH EXPENSE")
+    print("=" * 50)
+    
+    # Validate Expense ID
+    while True:
+        try:
+            search_id = int(input("Enter Expense ID:"))
+            if search_id < 0 :
+                print("Expense ID cannot be less than 0.")
+            else:
+                break
+        except ValueError:
+            print("Enter a valid Expense ID.")
+
+    found = False
+    
+    for expense in expenses:
+        if expense['id'] == search_id:
+            found = True
+            
+            print("\n" + "-" * 15 + " CURRENT EXPENSE " + "-" * 15)
+            
+            print(f"ID              : {expense['id']}")
+            print(f"Category        : {expense['category']}")
+            print(f"Description     : {expense['description']}")
+            print(f"Amount          : ₹{expense['amount']}")
+            print(f"Payment Method  : {expense['payment_method']}")
+            break
+    
+    if not found :
+        print("Expense ID not found.")
+        
+        return
+                
+            
+    
