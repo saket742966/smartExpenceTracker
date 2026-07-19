@@ -1,1 +1,72 @@
-[]
+[
+    {
+        "id": 1,
+        "category": "Food",
+        "description": "Domino's Pizza",
+        "amount": 450,
+        "payment_method": "UPI"
+    },
+    {
+        "id": 2,
+        "category": "Transport",
+        "description": "Uber Ride",
+        "amount": 280,
+        "payment_method": "Credit Card"
+    },
+    {
+        "id": 3,
+        "category": "Shopping",
+        "description": "T-Shirt",
+        "amount": 899,
+        "payment_method": "Debit Card"
+    },
+    {
+        "id": 4,
+        "category": "Entertainment",
+        "description": "Movie Ticket",
+        "amount": 350,
+        "payment_method": "Cash"
+    },
+    {
+        "id": 5,
+        "category": "Food",
+        "description": "Burger King",
+        "amount": 320,
+        "payment_method": "UPI"
+    },
+    {
+        "id": 6,
+        "category": "Bills",
+        "description": "Electricity Bill",
+        "amount": 1850,
+        "payment_method": "Net Banking"
+    },
+    {
+        "id": 7,
+        "category": "Healthcare",
+        "description": "Medicines",
+        "amount": 640,
+        "payment_method": "Cash"
+    },
+    {
+        "id": 8,
+        "category": "Education",
+        "description": "Python Book",
+        "amount": 1200,
+        "payment_method": "UPI"
+    },
+    {
+        "id": 9,
+        "category": "Shopping",
+        "description": "Headphones",
+        "amount": 2999,
+        "payment_method": "Credit Card"
+    },
+    {
+        "id": 10,
+        "category": "Food",
+        "description": "Coffee",
+        "amount": 180,
+        "payment_method": "Cash"
+    }
+]
