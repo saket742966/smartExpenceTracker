@@ -40,7 +40,7 @@ while True:
         print("Search Expenses Selected")
         
     elif choice == 4:
-        print("Edit Expenses Selected")
+        edit_expense()
 
     elif choice == 5:
         delete_expense()
