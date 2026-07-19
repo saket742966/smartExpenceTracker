@@ -112,7 +112,7 @@ def delete_expense():
         
 
 # ===========================================
-# EDIT HELPER FUNCTIONS
+# EDIT HELPER FUNCTIONS STARTS
 # ===========================================
 
 def edit_category(expense, expenses):
@@ -158,12 +158,35 @@ def edit_description(expense, expenses):
     
     print("\nDescription updated successfully.")
 
-def edit_amount(expense):
-    pass
+def edit_amount(expense, expenses):
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EDIT AMOUNT")
+    print("=" * 50)
+    
+    print(f"Current Amount : {expense['amount']}")
+    
+    while True:
+        try:
+            new_amount = int(input("Enter New Amount: "))
+            if new_amount > 0 :
+                break
+            else:
+                print("Amount must be greater than 0.")
+        except ValueError:
+            print("Please enter a valid integer.")
 
+    expense['amount'] = new_amount
+    
+    save_expenses(expenses)
+    
+    print("Amount updated successfully.")
 
 def edit_payment_method(expense):
     pass   
+
+# ===========================================
+# EDIT HELPER FUNCTIONS ENDS
+# ===========================================
 
 
 
