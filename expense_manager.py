@@ -181,8 +181,27 @@ def edit_amount(expense, expenses):
     
     print("Amount updated successfully.")
 
-def edit_payment_method(expense):
-    pass   
+def edit_payment_method(expense, expenses):
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EDIT PAYMENT METHOD")
+    print("=" * 50)
+    
+    print(f"Current Payment Method : {expense['payment_method']}")
+    
+    while True:
+        new_payment_method = input("Enter New Payment Method: ").strip()
+        if new_payment_method == "":
+            print("Payment method cannot be empty.")
+        
+        else:
+            break
+        
+    expense['payment_method'] = new_payment_method
+    
+    save_expenses(expenses)
+    
+    print("\nPayment method updated successfully.")
+    
 
 # ===========================================
 # EDIT HELPER FUNCTIONS ENDS
@@ -241,18 +260,18 @@ def edit_expense():
     print("5. Cancel\n")
     
     choice = input("Enter a Choice: ")
-    
-    if choice == '1' :
-        edit_category(expense)
         
-    elif choice == '2':
-        edit_description(expense)
-    
-    elif choice == '3':
-        edit_amount(expense)
-        
-    elif choice == '4':
-        edit_payment_method(expense)
-        
-    elif choice == '5':
-        print('Edit cancelled.')
+    if choice == "1":
+        edit_category(expense, expenses)
+
+    elif choice == "2":
+        edit_description(expense, expenses)
+
+    elif choice == "3":
+        edit_amount(expense, expenses)
+
+    elif choice == "4":
+        edit_payment_method(expense, expenses)
+
+    elif choice == "5":
+        print("\nEdit cancelled.")
