@@ -137,9 +137,26 @@ def edit_category(expense, expenses):
     print("\nCategory updated successfully.")
 
 
-def edit_description(expense):
-    pass
-
+def edit_description(expense, expenses):
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EDIT DESCRIPTION")
+    print("=" * 50)
+    
+    print(f"Current Description : {expense['description']}")
+    
+    while True:
+        new_description = input("Enter New Description: ").strip()
+        
+        if new_description == "":
+            print("Description cannot be empty.")
+        else:
+            break
+    
+    expense['description'] = new_description
+    
+    save_expenses(expenses)
+    
+    print("\nDescription updated successfully.")
 
 def edit_amount(expense):
     pass
