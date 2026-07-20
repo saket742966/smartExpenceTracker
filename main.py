@@ -46,7 +46,7 @@ while True:
         delete_expense()
 
     elif choice == 6:
-        print("Reports Selected")
+        expense_summary()
         
     elif choice == 7:
         print("Save Data Selected")

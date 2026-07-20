@@ -310,4 +310,47 @@ def search_expense():
         return
                 
             
+def expense_summary():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EXPENSE SUMMARY")
+    print("=" * 50)
     
+    if not expenses:
+        print("No expenses found.")
+        return
+    
+    # Number of expenses
+    total_expenses = len(expenses)
+    print(f"Total Expenses      : {total_expenses}")
+    
+    # Total amount spent
+    total_amount = 0
+    for expense in expenses:
+        total_amount += expense['amount']
+        
+    print(f"Total Amount Spent      : ₹{total_amount}")
+    
+    # Highest Expense
+    highest_expense = expenses[0]['amount']
+    
+    for expense in expenses:
+            if expense['amount'] > highest_expense:
+                highest_expense = expense['amount']
+
+    print(f"Highest Expense     : ₹{highest_expense}")
+    
+    # Lowest Expense
+    lowest_expense = expenses[0]['amount']
+    
+    for expense in expenses:
+        if expense['amount'] < lowest_expense:
+            lowest_expense = expense['amount']
+            
+    print(f"Lowest Expense      : ₹{lowest_expense}")
+    
+    # Average Expense
+    avg_expense = total_amount / total_expenses
+    
+    print(f"Average Expense     : ₹{avg_expense:.2f}")
+    
+    print("\n" + "=" * 50)
