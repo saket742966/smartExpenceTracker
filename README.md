@@ -19,4 +19,4 @@ A command-line expense tracker built in Python.
 
 ## Status
 
-🚧 Currently under development.
+VERSION 1 COMPLETED !
