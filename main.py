@@ -49,7 +49,7 @@ while True:
         expense_summary()
         
     elif choice == 7:
-        print("Save Data Selected")
+        export_to_csv()
         
     elif choice == 8:
         break

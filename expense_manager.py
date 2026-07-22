@@ -1,5 +1,6 @@
 from storage import save_expenses
 from storage import load_expenses
+import csv
 
 expenses = load_expenses()
 
@@ -354,3 +355,39 @@ def expense_summary():
     print(f"Average Expense     : ₹{avg_expense:.2f}")
     
     print("\n" + "=" * 50)
+    
+    
+def export_to_csv():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "EXPORT TO CSV")
+    print("=" * 50)
+
+    if not expenses:
+        print("No expenses found.")
+        return
+
+    with open("expenses.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+
+        # Write CSV headers
+        writer.writerow([
+            "ID",
+            "Category",
+            "Description",
+            "Amount",
+            "Payment Method"
+        ])
+
+        # Write expense data
+        for expense in expenses:
+            writer.writerow([
+                expense["id"],
+                expense["category"],
+                expense["description"],
+                expense["amount"],
+                expense["payment_method"]
+            ])
+
+    print("\nExpenses exported successfully to expenses.csv")
+    
+    
